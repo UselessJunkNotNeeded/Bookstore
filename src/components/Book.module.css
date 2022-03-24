@@ -4,9 +4,9 @@
   align-items: center;
   padding: 2rem 5rem 2rem 1.7rem;
   border: 2px solid lightgray;
-  /* padding: 2rem 6.25rem; */
   margin: 0 6.25rem;
   background-color: #fff;
+  flex-wrap: wrap;
 }
 
 .info {
