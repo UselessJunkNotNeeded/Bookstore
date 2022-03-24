@@ -1,5 +1,8 @@
 .progress {
   display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 5rem;
 }
 .status {
   display: flex;
@@ -38,6 +41,16 @@
   stroke-dashoffset: calc(190 - (190 * 10) / 100);
   stroke: #03a9f4;
 }
+.progressReport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.progressReport p {
+  font-size: 0.85rem;
+  color: grey;
+}
 
 .vl {
   height: 3rem;
@@ -47,7 +60,7 @@
 .progressUpdate {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 0.5rem;
 }
@@ -57,4 +70,13 @@
 }
 
 .chapterTitle {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.progressBtn {
+  background-color: #03a9f4;
+  padding: 0.5rem 1rem;
+  color: lightgray;
+  border-radius: 3px;
+  text-transform: uppercase;
 }

@@ -13,7 +13,7 @@ const Book = () => (
       <ul className={classes.btn}>
         <li>
           <button type="button" className={classes.comment}>
-            Comment
+            Comments
           </button>
         </li>
         <li>

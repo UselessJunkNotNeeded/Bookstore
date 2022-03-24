@@ -17,7 +17,7 @@ const Progress = () => (
           />
         </svg>
       </div>
-      <div className={classes.progress}>
+      <div className={classes.progressReport}>
         <h2>
           {progress}
           <span>%</span>
