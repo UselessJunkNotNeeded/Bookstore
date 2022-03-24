@@ -8,7 +8,9 @@ const Input = () => (
       <input type="text" placeholder="Book title" required />
       <input type="text" placeholder="Author" required />
       <select name="category" id="category" required>
-        <option disabled> Category </option>
+        <option value="" disabled>
+          Category
+        </option>
         <option value="Action">Action</option>
         <option value="Economy">Economy</option>
         <option value="Fiction">Science Fiction</option>
