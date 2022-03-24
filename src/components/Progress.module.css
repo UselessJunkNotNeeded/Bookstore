@@ -1,0 +1,37 @@
+.status {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: content;
+  align-items: center;
+}
+.circle {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle svg {
+  height: 4rem;
+  width: 4rem;
+}
+.circle svg circle {
+  height: 4rem;
+  width: 4rem;
+  fill: none;
+  stroke-width: 3;
+  stroke: rgb(53, 178, 216);
+  transform: translate(2px, 2px);
+  stroke-dasharray: 190;
+  stroke-dashoffset: 190;
+}
+
+.circle svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #f3f3f3;
+}
+.circle svg circle:nth-child(2) {
+  stroke-dashoffset: calc(190 - (190 * 10) / 100);
+  stroke: #03a9f4;
+}
