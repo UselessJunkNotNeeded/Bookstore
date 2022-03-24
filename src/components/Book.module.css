@@ -1,0 +1,50 @@
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem 2rem 1.7rem;
+  border: 2px solid lightgray;
+  /* padding: 2rem 6.25rem; */
+  margin: 0 6.25rem;
+  background-color: #fff;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.bookinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  justify-content: flex-start;
+}
+.category {
+  font-size: 0.85rem;
+  color: grey;
+}
+.author {
+  font-size: 0.85rem;
+  color: rgb(53, 178, 216);
+}
+
+.btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.vl {
+  height: 1.25rem;
+  width: 2px;
+  background-color: lightgray;
+}
+
+.btn li button {
+  background-color: transparent;
+  border: none;
+  color: rgb(53, 178, 216);
+}

@@ -4,6 +4,7 @@
     "es6": true,
     "jest": true
   },
+
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -14,7 +15,9 @@
   },
   "extends": ["airbnb", "plugin:react/recommended"],
   "plugins": ["react"],
+
   "rules": {
+    "comma-dangle": ["error", "never"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
