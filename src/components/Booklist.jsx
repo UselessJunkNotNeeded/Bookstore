@@ -1,14 +1,18 @@
 import React from 'react';
 import Book from './Book';
+import Input from './Input';
 
 import classes from './Booklist.module.css';
 
 const Booklist = () => (
-  <div className={classes.allbooks}>
-    <div>
-      <Book />
+  <section className={classes.library}>
+    <div className={classes.allbooks}>
+      <div>
+        <Book />
+      </div>
     </div>
-  </div>
+    <Input />
+  </section>
 );
 
 export default Booklist;
