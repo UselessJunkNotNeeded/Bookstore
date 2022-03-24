@@ -1,3 +1,6 @@
+.progress {
+  display: flex;
+}
 .status {
   display: flex;
   gap: 1rem;
@@ -34,4 +37,24 @@
 .circle svg circle:nth-child(2) {
   stroke-dashoffset: calc(190 - (190 * 10) / 100);
   stroke: #03a9f4;
+}
+
+.vl {
+  height: 3rem;
+  width: 2px;
+  background-color: lightgray;
+}
+.progressUpdate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.chapter {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.chapterTitle {
 }

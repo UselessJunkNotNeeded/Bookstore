@@ -18,9 +18,20 @@ const Progress = () => (
         </svg>
       </div>
       <div className={classes.progress}>
-        <h2>10%</h2>
+        <h2>
+          {progress}
+          <span>%</span>
+        </h2>
         <p>completed</p>
       </div>
+    </div>
+    <div className={classes.vl} />
+    <div className={classes.progressUpdate}>
+      <p className={classes.chapter}>Current Chapter</p>
+      <p className={classes.chapterTitle}>Chapter 17</p>
+      <button type="button" className={classes.progressBtn}>
+        Update Progress
+      </button>
     </div>
   </div>
 );
