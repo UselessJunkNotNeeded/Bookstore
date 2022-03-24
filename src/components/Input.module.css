@@ -1,0 +1,38 @@
+.formControl {
+  padding: 2rem 6.25rem;
+}
+
+.formControl h2 {
+  font-size: 1.25rem;
+  color: grey;
+  word-spacing: 6px;
+}
+
+.form {
+  padding: 1rem 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.form input {
+  width: 25rem;
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+
+.form input::placeholder {
+  color: lightgray;
+}
+
+.form select {
+  width: 15rem;
+  padding-left: 1rem;
+}
+
+.addBtn {
+  background-color: #03a9f4;
+  padding: 0.25rem 4rem;
+  color: white;
+}

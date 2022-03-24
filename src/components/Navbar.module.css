@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.813rem 6.25rem;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px rgb(185, 185, 185);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav ul li a {
+  color: grey;
+  cursor: pointer;
+}
+
+.logo {
+  color: rgb(30, 126, 251);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: rgb(30, 126, 251);
+  cursor: pointer;
+}
