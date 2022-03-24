@@ -14,15 +14,18 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
+
 .form input {
   width: 25rem;
   height: 2rem;
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
 }
+
 .form input::placeholder {
   color: lightgray;
 }
+
 .form select {
   width: 15rem;
   padding-left: 1rem;
