@@ -2,12 +2,10 @@ const SET_CATEGORY = 'SET_CATEGORY';
 
 const initialState = [];
 
-export const setCategory = (payload) => {
-  return {
-    type: SET_CATEGORY,
-    payload,
-  };
-};
+export const setCategory = (payload) => ({
+  type: SET_CATEGORY,
+  payload
+});
 
 const categoryReducer = (state = initialState, action) => {
   switch (action.type) {

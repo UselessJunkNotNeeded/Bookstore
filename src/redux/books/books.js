@@ -3,19 +3,15 @@ const REMOVED_BOOK = 'REMOVE_BOOK';
 
 const initialState = [];
 
-export const addBook = (payload) => {
-  return {
-    type: ADD_BOOK,
-    payload,
-  };
-};
+export const addBook = (payload) => ({
+  type: ADD_BOOK,
+  payload
+});
 
-export const removeBook = (payload) => {
-  return {
-    type: REMOVED_BOOK,
-    payload,
-  };
-};
+export const removeBook = (payload) => ({
+  type: REMOVED_BOOK,
+  payload
+});
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
