@@ -8,3 +8,15 @@ export const setCategory = (payload) => {
     payload,
   };
 };
+
+const categoryReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_CATEGORY: {
+      return [...state, action.payload];
+    }
+    default:
+      return state;
+  }
+};
+
+export default categoryReducer;
