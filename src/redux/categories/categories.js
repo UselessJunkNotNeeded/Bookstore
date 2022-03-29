@@ -4,7 +4,7 @@ const initialState = [];
 
 export const setCategory = (payload) => ({
   type: SET_CATEGORY,
-  payload,
+  payload
 });
 
 const categoryReducer = (state = initialState, action) => {

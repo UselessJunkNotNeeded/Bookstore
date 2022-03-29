@@ -5,12 +5,12 @@ const initialState = [];
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
-  payload,
+  payload
 });
 
 export const removeBook = (payload) => ({
   type: REMOVED_BOOK,
-  payload,
+  payload
 });
 
 const bookReducer = (state = initialState, action) => {
