@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { updateBook } from '../redux/books/books';
 import classes from './Progress.module.css';
 
-const Progress = ({prog}) => {
-  const geterateRandomNumber = () => {
-    const rand = Math.floor(Math.random() * 11);
+const Progress = ({ progress, id }) => {
+  const generateRandomNumber = () => {
+    const rand = Math.floor(Math.random() * 10) + 1;
     return rand;
   };
-  const progress = prog
-  const [random, setRandom] = useState(progress);
+  const dispatch = useDispatch();
+  const handleUpdate = () => {
+    let rand = Math.floor(Math.random() * 10) + 1;
+    if (progress + rand > 100) rand = 100 - progress;
+
+    dispatch(updateBook({ id, rand }));
+  };
   return (
     <div className={classes.progress}>
       <div className={classes.status}>
@@ -35,7 +41,11 @@ const Progress = ({prog}) => {
       <div className={classes.progressUpdate}>
         <p className={classes.chapter}>Current Chapter</p>
         <p className={classes.chapterTitle}>Chapter 17</p>
-        <button type="button" className={classes.progressBtn}>
+        <button
+          type="button"
+          disabled={progress == 100 ? true : false}
+          className={classes.progressBtn}
+          onClick={handleUpdate}>
           Update Progress
         </button>
       </div>

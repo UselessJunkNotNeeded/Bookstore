@@ -3,10 +3,9 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import classes from './Book.module.css';
 import Progress from './Progress';
-import deleteBook from '../redux/books/books';
+import { removeBook } from '../redux/books/books';
 
 const Book = ({ data }) => {
-  console.log(data);
   const { title, author, category, id, progress } = data;
   const dispatch = useDispatch();
   return (
@@ -30,8 +29,7 @@ const Book = ({ data }) => {
             <button
               type="button"
               className={classes.remove}
-              onClick={() => dispatch(deleteBook(id))}
-            >
+              onClick={() => dispatch(removeBook(id))}>
               Remove
             </button>
           </li>
@@ -45,7 +43,7 @@ const Book = ({ data }) => {
           </li>
         </ul>
       </div>
-      <Progress prog={progress}/>
+      <Progress progress={progress} id={id} />
     </div>
   );
 };
