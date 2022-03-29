@@ -1,5 +1,6 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-const REMOVED_BOOK = 'bookStore/books/REMOVE_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const UPDATE_BOOK = 'bookStore/books/UPDATE_BOOK';
 
 const initialState = [];
 
@@ -9,7 +10,12 @@ export const addBook = (payload) => ({
 });
 
 export const removeBook = (payload) => ({
-  type: REMOVED_BOOK,
+  type: REMOVE_BOOK,
+  payload
+});
+
+export const updateBook = (payload) => ({
+  type: UPDATE_BOOK,
   payload
 });
 
@@ -19,8 +25,19 @@ const bookReducer = (state = initialState, action) => {
       return [...state, action.payload];
     }
 
-    case REMOVED_BOOK: {
-      return state.filter((book) => book.id !== action.payload.id);
+    case REMOVE_BOOK: {
+      return state.filter((book) => book.id !== action.payload);
+    }
+    case UPDATE_BOOK: {
+      return state.map((book) => {
+        if (book.id === action.payload.id) {
+          return {
+            ...book,
+            progress: book.progress + action.payload.rand
+          };
+        }
+        return book;
+      });
     }
     default:
       return state;
