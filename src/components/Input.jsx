@@ -8,7 +8,7 @@ const Input = () => {
   const dispatch = useDispatch();
   const title = useRef('');
   const author = useRef('');
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState('Not specified');
   const inputHandler = (e) => {
     e.preventDefault();
 
@@ -17,7 +17,7 @@ const Input = () => {
         title: title.current.value,
         author: author.current.value,
         category,
-        progress,
+        progress:0,
         id: uuid()
       })
     );

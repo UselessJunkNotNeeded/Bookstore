@@ -6,7 +6,8 @@ import Progress from './Progress';
 import deleteBook from '../redux/books/books';
 
 const Book = ({ data }) => {
-  const { title, author, category, id } = data;
+  console.log(data);
+  const { title, author, category, id, progress } = data;
   const dispatch = useDispatch();
   return (
     <div className={classes.book}>
@@ -44,17 +45,17 @@ const Book = ({ data }) => {
           </li>
         </ul>
       </div>
-      <Progress />
+      <Progress prog={progress}/>
     </div>
   );
 };
 
 export default Book;
 
-Book.propTypes = {
-  data: PropTypes.object.isRequired,
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired
-};
+// Book.propTypes = {
+//   data: PropTypes.object.isRequired,
+//   title: PropTypes.string.isRequired,
+//   author: PropTypes.string.isRequired,
+//   category: PropTypes.string.isRequired,
+//   id: PropTypes.number.isRequired
+// };

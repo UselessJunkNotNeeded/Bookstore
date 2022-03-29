@@ -12,6 +12,7 @@ const Booklist = () => {
     return (
       <div style={{ textAlign: 'center', marginTop: '5rem' }}>
         <h3>No books added yet</h3>
+        <Input />
       </div>
     );
   }
@@ -22,7 +23,6 @@ const Booklist = () => {
         {data.map((book) => (
           <Book key={book.id} data={book} />
         ))}
-        <Book />
       </div>
       <Input />
     </section>

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-// import { GiCircle } from 'react-icons/gi';
+import { useDispatch } from 'react-redux';
 import classes from './Progress.module.css';
 
-const progress = 30;
-const Progress = () => {
+const Progress = ({prog}) => {
   const geterateRandomNumber = () => {
     const rand = Math.floor(Math.random() * 11);
     return rand;
   };
-  const [random, setRandom] = useState(0);
+  const progress = prog
+  const [random, setRandom] = useState(progress);
   return (
     <div className={classes.progress}>
       <div className={classes.status}>
