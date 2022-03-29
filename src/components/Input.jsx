@@ -17,10 +17,12 @@ const Input = () => {
         title: title.current.value,
         author: author.current.value,
         category,
-        progress:0,
+        progress: 0,
         id: uuid()
       })
     );
+    title.current.value = '';
+    author.current.value = '';
   };
 
   return (
@@ -34,8 +36,7 @@ const Input = () => {
           id="category"
           defaultValue="DEFAULT"
           required
-          onChange={(e) => setCategory(e.target.value)}
-        >
+          onChange={(e) => setCategory(e.target.value)}>
           <option value="DEFAULT" disabled>
             Category
           </option>
