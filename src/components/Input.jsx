@@ -7,8 +7,8 @@ const Input = () => (
     <form className={classes.form}>
       <input type="text" placeholder="Book title" required />
       <input type="text" placeholder="Author" required />
-      <select name="category" id="category" required>
-        <option value="" disabled selected>
+      <select name="category" id="category" defaultValue="DEFAULT" required>
+        <option value="DEFAULT" disabled>
           Category
         </option>
         <option value="Action">Action</option>
@@ -17,7 +17,6 @@ const Input = () => (
         <option value="Adventure">Adventure</option>
       </select>
       <button type="button" className={classes.addBtn}>
-        {' '}
         Add Book
       </button>
     </form>
