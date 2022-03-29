@@ -10,6 +10,6 @@ const reducer = combineReducers({
   categoryReducer
 });
 
-const store = createStore(reducer, composeWithDevTools(applyMiddleware()));
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(logger)));
 
 export default store;
