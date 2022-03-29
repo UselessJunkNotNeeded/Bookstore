@@ -5,7 +5,7 @@ import categoryReducer from './categories/categories';
 
 const reducer = combineReducer({
   bookReducer,
-  categoryReducer
+  categoryReducer,
 });
 
 const store = createStore(reducer);
