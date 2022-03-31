@@ -11,14 +11,14 @@ const Input = () => {
   const [category, setCategory] = useState('Not specified');
   const inputHandler = (e) => {
     e.preventDefault();
-    const item_id = uuid();
+    const id = uuid();
     dispatch(
       addBook({
         title: title.current.value,
         author: author.current.value,
         category,
         progress: 0,
-        item_id
+        id
       })
     );
     fetch(
@@ -27,10 +27,10 @@ const Input = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          item_id: item_id,
+          item_id: id,
           title: title.current.value,
           author: author.current.value,
-          category: category
+          category
         })
       }
     );

@@ -26,7 +26,7 @@ const Booklist = () => {
     <section className={classes.library}>
       <div className={classes.allbooks}>
         {data.map((book) => (
-          <Book key={book.item_id} data={book} />
+          <Book key={book.id} data={book} />
         ))}
       </div>
       <Input />

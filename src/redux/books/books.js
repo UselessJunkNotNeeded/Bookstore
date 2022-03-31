@@ -24,7 +24,7 @@ export const fetchData = () => async (dispatch) => {
   Object.keys(data).forEach((key) => {
     dispatch(
       addBook({
-        item_id: key,
+        id: key,
         ...data[key][0],
         progress: 0
       })
@@ -45,11 +45,14 @@ const bookReducer = (state = initialState, action) => {
     }
 
     case REMOVE_BOOK: {
-      return state.filter((book) => book.item_id !== action.payload);
+      fetch(`${url}/${action.payload}`, {
+        method: 'DELETE'
+      });
+      return state.filter((book) => book.id !== action.payload);
     }
     case UPDATE_BOOK: {
       return state.map((book) => {
-        if (book.item_id === action.payload.item_id) {
+        if (book.id === action.payload.id) {
           return {
             ...book,
             progress: book.progress + action.payload.rand
