@@ -2,7 +2,6 @@ const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const UPDATE_BOOK = 'bookStore/books/UPDATE_BOOK';
 
-// const key = 'f1qf6g1CtRUPD00k0LWv';
 const url = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/f1qf6g1CtRUPD00k0LWv/books`;
 
 const initialState = [];
@@ -20,7 +19,6 @@ export const removeBook = (payload) => ({
 export const fetchData = () => async (dispatch) => {
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
   Object.keys(data).forEach((key) => {
     dispatch(
       addBook({
@@ -40,7 +38,6 @@ export const updateBook = (payload) => ({
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK: {
-      console.log(action.payload);
       return [...state, action.payload];
     }
 

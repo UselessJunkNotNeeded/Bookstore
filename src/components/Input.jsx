@@ -57,6 +57,7 @@ const Input = () => {
           <option value="Economy">Economy</option>
           <option value="Fiction">Science Fiction</option>
           <option value="Adventure">Adventure</option>
+          <option value="Fantasy">Fantasy</option>
         </select>
         <button type="submit" className={classes.addBtn}>
           Add Book
