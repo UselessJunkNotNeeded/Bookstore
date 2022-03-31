@@ -4,6 +4,7 @@ import { updateBook } from '../redux/books/books';
 import classes from './Progress.module.css';
 
 const Progress = ({ progress, id }) => {
+  if (!progress) progress = 0;
   const dispatch = useDispatch();
   const handleUpdate = () => {
     let rand = Math.floor(Math.random() * 10) + 1;
