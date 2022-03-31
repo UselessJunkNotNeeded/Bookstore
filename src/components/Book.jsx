@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import classes from './Book.module.css';
 import Progress from './Progress';
 import { removeBook } from '../redux/books/books';
@@ -50,10 +49,3 @@ const Book = ({ data }) => {
 
 export default Book;
 
-// Book.propTypes = {
-//   data: PropTypes.object.isRequired,
-//   title: PropTypes.string.isRequired,
-//   author: PropTypes.string.isRequired,
-//   category: PropTypes.string.isRequired,
-//   id: PropTypes.number.isRequired
-// };

@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { updateBook } from '../redux/books/books';
 import classes from './Progress.module.css';
 
 const Progress = ({ progress, id }) => {
-  const generateRandomNumber = () => {
-    const rand = Math.floor(Math.random() * 10) + 1;
-    return rand;
-  };
+  if (!progress) progress = 0;
   const dispatch = useDispatch();
   const handleUpdate = () => {
     let rand = Math.floor(Math.random() * 10) + 1;

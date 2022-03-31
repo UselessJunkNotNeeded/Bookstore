@@ -11,15 +11,28 @@ const Input = () => {
   const [category, setCategory] = useState('Not specified');
   const inputHandler = (e) => {
     e.preventDefault();
-
+    const id = uuid();
     dispatch(
       addBook({
         title: title.current.value,
         author: author.current.value,
         category,
         progress: 0,
-        id: uuid()
+        id
       })
+    );
+    fetch(
+      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/f1qf6g1CtRUPD00k0LWv/books`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          item_id: id,
+          title: title.current.value,
+          author: author.current.value,
+          category
+        })
+      }
     );
     title.current.value = '';
     author.current.value = '';
@@ -44,6 +57,7 @@ const Input = () => {
           <option value="Economy">Economy</option>
           <option value="Fiction">Science Fiction</option>
           <option value="Adventure">Adventure</option>
+          <option value="Fantasy">Fantasy</option>
         </select>
         <button type="submit" className={classes.addBtn}>
           Add Book
