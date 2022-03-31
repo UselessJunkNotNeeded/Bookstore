@@ -1,11 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import Input from './Input';
+import { fetchData } from '../redux/books/books';
 
 import classes from './Booklist.module.css';
 
 const Booklist = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, []);
   const data = useSelector(({ bookReducer }) => bookReducer);
 
   if (data.length === 0) {
@@ -21,7 +26,7 @@ const Booklist = () => {
     <section className={classes.library}>
       <div className={classes.allbooks}>
         {data.map((book) => (
-          <Book key={book.id} data={book} />
+          <Book key={book.item_id} data={book} />
         ))}
       </div>
       <Input />

@@ -11,15 +11,28 @@ const Input = () => {
   const [category, setCategory] = useState('Not specified');
   const inputHandler = (e) => {
     e.preventDefault();
-
+    const item_id = uuid();
     dispatch(
       addBook({
         title: title.current.value,
         author: author.current.value,
         category,
         progress: 0,
-        id: uuid()
+        item_id
       })
+    );
+    fetch(
+      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/f1qf6g1CtRUPD00k0LWv/books`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          item_id: item_id,
+          title: title.current.value,
+          author: author.current.value,
+          category: category
+        })
+      }
     );
     title.current.value = '';
     author.current.value = '';
