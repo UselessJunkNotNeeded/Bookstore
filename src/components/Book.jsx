@@ -48,4 +48,3 @@ const Book = ({ data }) => {
 };
 
 export default Book;
-
